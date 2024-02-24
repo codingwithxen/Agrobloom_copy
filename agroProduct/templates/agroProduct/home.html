@@ -1,0 +1,196 @@
+{% extends 'agroProduct/base.html' %}
+{% load static %}
+{% block content %}
+
+
+  <!-- content -->
+  <div style="display:grid;align-items: center; min-width: 370px; ">
+    <div style="height:fit-content; text-align: center;">
+      <img src="{% static 'agroProduct/image/seeds banner.svg' %}" alt=""><img>
+    </div>
+
+
+    <div>
+      <div class="categories">
+        <p>
+          Categories
+        </p>
+        <hr>
+      </div>
+      <div style="display: flex;justify-content: center;padding-left: 20px;">
+        <div>
+          <a href="{% url 'search' %}?category=seed">
+            <img src="{% static 'agroProduct/image/seed card.svg' %}" alt="">
+          </a>
+        </div>
+        <div>
+          <a href="{% url 'search' %}?category=tools">
+            <img src="{% static 'agroProduct/image/tools card.svg' %}" alt="">
+          </a>
+        </div>
+        <div>
+          <a href="{% url 'search' %}?category=fertilizers">
+            <img src="{% static 'agroProduct/image/fertilizers card.svg' %}" alt="">
+          </a>
+        </div>
+        <div>
+          <a href="{% url 'search' %}?category=pesticides">
+            <img src="{% static 'agroProduct/image/pesticides card.svg' %}" alt="">
+          </a>
+        </div>
+        <div>
+          <a href="{% url 'search' %}?category=animal husbandry">
+            <img src="{% static 'agroProduct/image/animal husbandry card.svg' %}" alt="">
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div class="categories">
+    <p>
+      OFFERS
+    </p>
+    <hr>
+  </div>
+
+  <div class="offers" style="background-color: rgba(159, 194, 146, 0.436); margin-inline: 210px; border-radius: 25px;">
+    <div class="product-container" >
+      <div class="product">
+        <div class="tool-product-img">
+          <img class="tool-product-image" src="{% static 'agroProduct/image/tools new resize/Crop cover-min.png' %}" alt="">
+        </div>
+        <p class="product-price">₹500</p>
+        <p class="product-text">Crop Cover</p>
+        <div style="padding:15px 13px 5px;">
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span>
+        </div>
+
+      </div>
+
+      <div class="product">
+        <div class="tool-product-img">
+          <img class="tool-product-image" src="{% static 'agroProduct/image/tools new resize/Grow bags-min.png' %}" alt="">
+        </div>
+        <p class="product-price">₹500</p>
+        <p class="product-text">Grow Bags</p>
+        <div style="padding:15px 13px 5px;">
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span>
+        </div>
+
+      </div>
+
+      <div class="product">
+        <div class="tool-product-img">
+          <img class="tool-product-image" src="{% static 'agroProduct/image/tools new resize/Hand rake-min.png' %}" alt="">
+        </div>
+        <p class="product-price">₹500</p>
+        <p class="product-text">Hand Rake</p>
+        <div style="padding:15px 13px 5px;">
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span>
+        </div>
+
+      </div>
+
+      <div class="product">
+        <div class="tool-product-img">
+          <img class="tool-product-image" src="{% static 'agroProduct/image/tools new resize/Hose pipe-min.png' %}" alt="">
+        </div>
+        <p class="product-price">₹500</p>
+        <p class="product-text">Hose Pipe</p>
+        <div style="padding:15px 13px 5px;">
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- product container -->
+    <div class="product-container">
+      <div class="product">
+        <div class="tool-product-img">
+          <img class="tool-product-image" src="{% static 'agroProduct/image/tools new resize/Hydroponic Grow Kit-min.png' %}" alt="">
+        </div>
+        <p class="product-price">₹500</p>
+        <p class="product-text">Hydroponic Grow Kit</p>
+        <div style="padding:15px 13px 5px;">
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span>
+        </div>
+
+      </div>
+
+      <div class="product">
+        <div class="tool-product-img">
+          <img class="tool-product-image" src="{% static 'agroProduct/image/tools new resize/irrigation pipe-min.png' %}" alt="">
+        </div>
+        <p class="product-price">₹500</p>
+        <p class="product-text">Irrigation Pipe</p>
+        <div style="padding:15px 13px 5px;">
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span>
+        </div>
+
+      </div>
+
+      <div class="product">
+        <div class="tool-product-img">
+          <img class="tool-product-image" src="{% static 'agroProduct/image/tools new resize/NET-min.png' %}" alt="">
+        </div>
+        <p class="product-price">₹500</p>
+        <p class="product-text">Net</p>
+        <div style="padding:15px 13px 5px;">
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span>
+        </div>
+  
+      </div>
+  
+      <div class="product">
+        <div class="tool-product-img">
+          <img class="tool-product-image" src="{% static 'agroProduct/image/tools new resize/Pot-min.png' %}" alt="">
+        </div>
+        <p class="product-price">₹500</p>
+        <p class="product-text">Pot</p>
+        <div style="padding:15px 13px 5px;">
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star checked"></span>
+          <span class="fa fa-star"></span>
+        </div>
+  
+      </div>
+    </div>
+
+    
+  </div>
+  </div>
+
+
+{% endblock %}

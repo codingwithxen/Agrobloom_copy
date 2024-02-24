@@ -1,0 +1,87 @@
+{% extends 'agroProduct/base.html' %}
+{% load static %}
+{% block content %}
+
+    <div style="display:grid; justify-items: center;">
+        <div class="prod-container">
+
+            <div class="img-container">
+                <img src="{{product.product_image.url}}" alt="">
+            </div>
+
+            <div class="prod-details">
+                <h3 style="font-family: 'Medium'; font-size: 15px; color: blue; letter-spacing: 2px;padding: 0;">SEEDS
+                </h3>
+                <p>{{product.product_name}}</p>
+
+                <div class="quantity-text">Quantity</div>
+                <div class="quantity">
+                    <div class="select">
+                        <input type="radio" name="select" id="option-1" checked>
+                        <input type="radio" name="select" id="option-2">
+                        <input type="radio" name="select" id="option-3">
+                        <label for="option-1" class="option option-1">
+                            <div class="dot"></div>
+                            <span>50g</span>
+                        </label>
+                        <label for="option-2" class="option option-2">
+                            <div class="dot"></div>
+                            <span>100g</span>
+                        </label>
+                        <label for="option-3" class="option option-3">
+                            <div class="dot"></div>
+                            <span>250g</span>
+                        </label>
+                    </div>
+                </div>
+                <div style="display: flex;">
+                    <p style="font-family: 'Bold';color: rgb(124, 124, 124);">{{product.product_price}}</p>
+                    <div style="padding:15px 30px;">
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star checked"></span>
+                        <span class="fa fa-star"></span>
+                    </div>
+                </div>
+                <div style="display: flex; padding: 20px 0;">
+                    <div class="buynow" style="padding: 5px 10px; width:200px;">
+                        <a href="#">Buy Now</a>
+                    </div>
+                    <div class="addtocart" style="padding: 5px 10px; width:200px ">
+                        <a href="#">Add to Cart</a>
+                    </div>
+                </div>
+
+            </div>
+
+
+        </div>
+
+        <div class="prod-description">
+            <div class="prod-heading">
+                Description
+            </div>
+            <div class="prod-desc-content">
+                Introducing our premium Lotus Seed Pack for Plantation, a comprehensive solution to embark on a
+                captivating journey of lotus cultivation. This thoughtfully curated pack is designed to provide you with
+                everything you need to grow your own stunning lotus garden, whether you're a seasoned gardener or a
+                novice.
+            </div>
+            <div class="prod-desc-content">
+                Inside each Lotus Seed Pack for Plantation, you'll find a carefully selected collection of top-quality
+                lotus seeds. These seeds have been handpicked for their viability and growth potential, ensuring a
+                higher chance of successful germination. With our premium seeds, you can witness the miraculous
+                transformation of these sacred flowers right before your eyes.
+            </div>
+            <div class="prod-desc-content">
+                Our Lotus Seed Pack for Plantation comes with detailed and user-friendly planting instructions, guiding
+                you through the entire process from start to finish. Whether you choose to create a serene pond, a
+                vibrant container garden, or even an indoor water feature, our step-by-step guide will empower you to
+                cultivate your own flourishing lotus paradise.
+            </div>
+        </div>
+    </div>
+
+
+{% endblock %}

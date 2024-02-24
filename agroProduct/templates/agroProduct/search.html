@@ -1,0 +1,78 @@
+{% extends 'agroProduct/base.html' %}
+{% load static %}
+{% block content %}
+
+<div style="display: flex;">
+    <div style="width:fit-content;padding-left: 20px;">
+      <p class="filter-bar" style="text-align: center; padding-bottom: 10px;">
+        FILTERS
+      </p>
+      <div class="filter" style=" background-color: #F1F1F1; width: 280px;">
+        <p class="filter-bar">
+          Categories
+        </p>
+        <a href="" style="color:rgb(44, 139, 58) ;font-size: 20px;padding:10px 30px;">Seeds</a>
+        <a href="">Fertilizers</a>
+        <a href="">pesticides Products</a>
+        <a href="">Organic Farming</a>
+        <a href="">Kitchen Garden</a>
+        <a href="">Tools &amp; Equipment</a>
+        <a href="">Animal Husbandry</a>
+        <div style="padding: 15px;"></div>
+        <p class="filter-bar">
+          Price
+        </p>
+      </div>
+    </div>
+
+    <!-- productpage -->
+    <div class="product-page">
+      <div class="product-container">
+        {% for product in page_obj %}
+        <div class="product">
+          
+          <div class="heart-icon" ><a href="#"><ion-icon name="heart-outline"></ion-icon></a></div>
+          <div class="product-img" onclick="location.href='{% url 'product' %}?productId={{product.product_id}}';">
+              <img class="product-image" src="{{product.product_image.url}}" alt="">
+          </div>
+          <p class="product-price">₹{{product.product_price}}</p>
+          <p class="product-text">{{product.product_name}}</p>
+          <div style="padding:15px 13px 5px;">
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star"></span>
+          </div>
+          <div class="buynow">
+            <a href="#">Buy Now</a>
+          </div>
+          <div class="addtocart">
+            <a href="#">Add to Cart</a>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+
+        <div class="pagination">
+            <span>
+                {% if page_obj.has_previous %}
+                <a class="pagination-first" href="?page=1">First</a>
+                <a class="pagination-prev" href="?page={{page_obj.previous_page_number}}">Previous</a>
+                {% endif %}
+                <span class="pagination-num">
+                    Page {{page_obj.number}} of {{page_obj.paginator.num_pages}}
+                </span>
+            
+                {% if page_obj.has_next %}
+                <a class="pagination-next" href="?page={{page_obj.next_page_number}}">Next</a>
+                <a class="pagination-last" href="?page={{page_obj.paginator.num_pages}}">Last</a>
+                {% endif %}
+            </span>
+        </div>
+        
+    </div>
+
+</div>
+
+{% endblock %}
